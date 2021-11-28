@@ -10,11 +10,11 @@
     const content = document.getElementById('content');
     const paths = window.location.pathname.split('/')
     console.log(paths);
-    if (paths.includes('validate')){
+    if (paths.includes('validate') && paths.length === 2){
       error.load('error.html');
     }
     if (paths.includes('R3dYN2hWNkIvMlU9')){
-      error.load('R3dYN2hWNkIvMlU9.html');
+      content.load('R3dYN2hWNkIvMlU9.html');
     }
   </script>
 </html>
