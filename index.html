@@ -5,4 +5,13 @@
     <div id="error"></div>
     <div id="content"></div>
   </body>
+  <script>
+    const error = document.getElementById('error');
+    const content = document.getElementById('content');
+    const paths = window.location.pathname.split('/')
+    console.log(paths);
+    if (paths.contains('validate')){
+      error.load('error.html');
+    }
+  </script>
 </html>
