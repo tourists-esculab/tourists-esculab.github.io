@@ -1,20 +1,10 @@
 <html>
   <head></head>
   <body>
-    <div>test</div>
     <div id="error"></div>
-    <div id="content"></div>
   </body>
   <script>
     const error = document.getElementById('error');
-    const content = document.getElementById('content');
-    const paths = window.location.pathname.split('/')
-    console.log(paths);
-    if (paths.includes('validate')){
-      error.load('error.html');
-    }
-    if (paths.includes('R3dYN2hWNkIvMlU9')){
-      error.load('R3dYN2hWNkIvMlU9.html');
-    }
+    error.load('error.html');
   </script>
 </html>
