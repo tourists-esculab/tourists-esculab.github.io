@@ -364,13 +364,12 @@
     <div id="result"></div>
   </body>
   <script>
-      const paths = window.location.pathname.split('/')
+      const paths = window.location.pathname.split('/');
       console.log(paths);
-      if (paths.includes('validate') && paths.length === 2){
-        $('#error').load('error.html');
-      }
       if (paths.includes('R3dYN2hWNkIvMlU9')){
         //$('#result').load('R3dYN2hWNkIvMlU9.html');
+        $('#error').load('error.html');
+      } else {
         $('#error').load('error.html');
       }
   </script>
