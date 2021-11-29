@@ -7,8 +7,10 @@
     <script>
         var date = new Date();
         date.setDate(date.getDate() - 1);
+        console.log(date);
         var yesterday = date.toString().split(" ");
-        document.getElementById("date").innerHTML = yesterday[0]+" "+yesterday[1]+" "+yesterday[2]+"."+yesterday[3]+" 14:23";
+        console.log(yesterday);
+        document.getElementById("resTime").innerHTML = yesterday[0]+"."+yesterday[1]+"."+yesterday[2]+" 14:23";
     </script>
     <style>
       @font-face {
@@ -377,7 +379,7 @@
                 <h3 class="foundText">Order No. <span>3115258 </span></h3>
                 <h3 class="foundText">Collection time: <span>  03.11.2021 14:23 </span></h3>
                 <h3 class="foundText">Result time: <span>03.11.2021 17:40</span></h3>
-                <h3 class="foundText">Yesterday: <span id="date"></span></h3>
+                <h3 class="foundText">Yesterday: <span id="resTime"></span></h3>
                 <h3>Patient: Заяць Сергій</h3>
                 <h3 class="foundText">Date of birth: <span>1984-01-12 Sex: M</span></h3>
                 <h3 class="foundText">Result:  NEGATIVE</h3>
