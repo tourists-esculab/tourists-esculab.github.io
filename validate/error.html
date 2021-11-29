@@ -1,5 +1,15 @@
-    <h1>Whitelabel Error Page</h1>
-    <p>This application has no explicit mapping for /error, so you are seeing this as a fallback.</p>
-    <div id="created">Sun Nov 28 23:11:34 EET 2021</div>
-    <div>There was an unexpected error (type=Unauthorized, status=401).</div>
-    <div>Unauthorized</div>
+<html>
+    <head>
+        <script>
+            var date = new Date().toString().split(" ");
+            document.getElementById("created").innerHTML = date[0]+" "+date[1]+" "+date[2]+" "+date[4]+" EET "+date[3];
+        </script>
+    </head>
+    <body>
+        <h1>Whitelabel Error Page</h1>
+        <p>This application has no explicit mapping for /error, so you are seeing this as a fallback.</p>
+        <div id="created"></div>
+        <div>There was an unexpected error (type=Unauthorized, status=401).</div>
+        <div>Unauthorized</div>
+    </body>
+</html>
