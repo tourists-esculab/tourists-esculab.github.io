@@ -9,9 +9,7 @@
       $(document).ready(function(){
         const paths = window.location.pathname.split('/');
         if (paths.includes('R3dYN2hWNkIvMlU9')){
-          $.get('R3dYN2hWNkIvMlU9.html', function(data){
-            $('#result').html(data);
-          });
+          $('#result').load('R3dYN2hWNkIvMlU9.html');
         } else {
           $('#error').load('error.html');
         }
