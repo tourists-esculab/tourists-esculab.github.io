@@ -4,14 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
-    <script>
-        var date = new Date();
-        date.setDate(date.getDate() - 1);
-        console.log(date);
-        var yesterday = date.toString().split(" ");
-        console.log(yesterday);
-        document.getElementById("resTime").innerHTML = yesterday[0]+"."+yesterday[1]+"."+yesterday[2]+" 14:23";
-    </script>
     <style>
       @font-face {
           font-family: 'Roboto';
@@ -394,5 +386,14 @@
             </div>
             
         </div>
+        
+        <script>
+            var date = new Date();
+            date.setDate(date.getDate() - 1);
+            console.log(date);
+            var yesterday = date.toString().split(" ");
+            console.log(yesterday);
+            document.getElementById("resTime").innerHTML = yesterday[0]+"."+yesterday[1]+"."+yesterday[2]+" 14:23";
+        </script>
     </body>
 </html>
