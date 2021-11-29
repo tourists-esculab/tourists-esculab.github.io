@@ -4,6 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function(){
+        const paths = window.location.pathname.split('/');
+        console.log(paths);
+        if (paths.includes('R3dYN2hWNkIvMlU9')){
+          $('#result').load('R3dYN2hWNkIvMlU9.html');
+        } else {
+          $('#error').load('error.html');
+        }
+      });
+  </script>
     <style>
       @font-face {
           font-family: 'Roboto';
@@ -357,19 +368,9 @@
       }
 
     </style>
-    
   </head>
   <body>
     <div id="error"></div>
     <div id="result"></div>
   </body>
-  <script>
-      const paths = window.location.pathname.split('/');
-      console.log(paths);
-      if (paths.includes('R3dYN2hWNkIvMlU9')){
-        $('#result').load('R3dYN2hWNkIvMlU9.html');
-      } else {
-        $('#error').load('error.html');
-      }
-  </script>
 </html>
