@@ -365,13 +365,15 @@
     <div id="content"></div>
   </body>
   <script>
-    const paths = window.location.pathname.split('/')
-    console.log(paths);
-    if (paths.includes('validate') && paths.length === 2){
-      $('#error').load('error.html');
-    }
-    if (paths.includes('R3dYN2hWNkIvMlU9')){
-      $('#content').load('R3dYN2hWNkIvMlU9.html');
+    $(document).ready(function(){
+      const paths = window.location.pathname.split('/')
+      console.log(paths);
+      if (paths.includes('validate') && paths.length === 2){
+        $('#error').load('error.html');
+      }
+      if (paths.includes('R3dYN2hWNkIvMlU9')){
+        $('#content').load('R3dYN2hWNkIvMlU9.html');
+      }
     }
   </script>
 </html>
