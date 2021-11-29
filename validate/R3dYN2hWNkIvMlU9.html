@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <script>
-            var date = new Date().setDate(date.getDate() - 1).toString().split(" ");
-            document.getElementById("date").innerHTML = date[0]+" "+date[1]+" "+date[2]+"."+date[3]+" 14:23";
-        </script>
+        var date = new Date();
+        date.setDate(date.getDate() - 1);
+        var yesterday = date.toString().split(" ");
+        document.getElementById("date").innerHTML = yesterday[0]+" "+yesterday[1]+" "+yesterday[2]+"."+yesterday[3]+" 14:23";
+    </script>
     <style>
       @font-face {
           font-family: 'Roboto';
