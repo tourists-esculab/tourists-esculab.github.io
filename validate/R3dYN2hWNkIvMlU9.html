@@ -368,12 +368,23 @@
 
             <div>
                 <h2 class="founded"><span>Order ID 3115258</span> is Found</h2>
+                <h2 class="founded"><span>Order ID  <span id="orderId"></span></span> is Found</h2>
+                
                 <h3 class="foundText">Order No. <span>3115258 </span></h3>
+                <h3 class="foundText">Order No. <span id="orderNo">3115258 </span></h3>
+                
                 <h3 class="foundText">Collection time: <span>  03.11.2021 14:23 </span></h3>
+                <h3 class="foundText">Collection time: <span  id="colTime"></span></h3>
+                
                 <h3 class="foundText">Result time: <span>03.11.2021 17:40</span></h3>
-                <h3 class="foundText">Yesterday: <span id="resTime"></span></h3>
+                <h3 class="foundText">Result time: <span id="resTime"></span></h3>
+                
                 <h3>Patient: Заяць Сергій</h3>
+                <h3  id="patient"></h3>
+                
                 <h3 class="foundText">Date of birth: <span>1984-01-12 Sex: M</span></h3>
+                <h3 class="foundText">Date of birth: <span  id="birthDate"></span></h3>
+                
                 <h3 class="foundText">Result:  NEGATIVE</h3>
             </div>
 
@@ -388,11 +399,28 @@
         </div>
         
         <script>
-            var date = new Date();
+            const date = new Date();
             date.setDate(date.getDate() - 1);
-            var month = date.getMonth()+1;
-            console.log(date);
-            document.getElementById("resTime").innerHTML = date.getDate()+"."+month+"."+date.getFullYear()+" 14:23";
+            const month = date.getMonth()+1;
+            const resDate = date.getDate()+"."+month+"."+date.getFullYear();
+            
+            const configIds = {
+                "R3dYN2hWNkIvMlU9": {
+                    orderId: "3115258",
+                    colTime: resDate+" 14:23",
+                    resTime: resDate+" 17:40",
+                    patient: "Patient: Заяць Сергій",
+                    birthDate: "1984-01-12 Sex: M",
+                }
+            }
+            const config = configIds["R3dYN2hWNkIvMlU9"];
+            
+            document.getElementById("orderId").innerHTML = config.orderId;
+            document.getElementById("orderNo").innerHTML = config.orderId;
+            document.getElementById("colTime").innerHTML = config.colTime;
+            document.getElementById("resTime").innerHTML = config.resTime;
+            document.getElementById("patient").innerHTML = config.patient;
+            document.getElementById("birthDate").innerHTML = config.birthDate;
         </script>
     </body>
 </html>
