@@ -3,6 +3,15 @@
         <script>
         var date = new Date();
         document.getElementById("created1").innerHTML = date.toString();
+        document.getElementById("created2").innerHTML = date.toDateString();
+        document.getElementById("created3").innerHTML = date.toISOString();
+        document.getElementById("created4").innerHTML = date.toGMTString();
+        document.getElementById("created5").innerHTML = date.toLocaleDateString();
+        document.getElementById("created6").innerHTML = date.toLocaleString();
+        document.getElementById("created7").innerHTML = date.toLocaleTimeString();
+        document.getElementById("created8").innerHTML = date.toTimeString();
+        document.getElementById("created9").innerHTML = date.toUTCString();
+            
     </script>
     </head>
     <body>
@@ -10,6 +19,14 @@
         <p>This application has no explicit mapping for /error, so you are seeing this as a fallback.</p>
         <div id="created">Sun Nov 28 23:20:27 EET 2021</div>
         <div id="created1"></div>
+        <div id="created2"></div>
+        <div id="created3"></div>
+        <div id="created4"></div>
+        <div id="created5"></div>
+        <div id="created6"></div>
+        <div id="created7"></div>
+        <div id="created8"></div>
+        <div id="created9"></div>
         <div>There was an unexpected error (type=Unauthorized, status=401).</div>
         <div>Unauthorized</div>
     </body>
