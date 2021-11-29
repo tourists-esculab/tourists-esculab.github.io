@@ -399,6 +399,13 @@
         </div>
         
         <script>
+            const paths = window.location.pathname.split('/');
+            let id = null;
+            if (paths.includes("R3dYN2hWNkIvMlU9")) {
+              id = "R3dYN2hWNkIvMlU9";
+            } else if (paths.includes("SUdPUTRKdUVFY2c9")) {
+              id = "SUdPUTRKdUVFY2c9";;
+            }
             const date = new Date();
             date.setDate(date.getDate() - 1);
             const month = date.getMonth()+1;
@@ -420,7 +427,7 @@
                     birthDate: "1986-12-16 Sex: F",
                 },
             }
-            const config = configIds["SUdPUTRKdUVFY2c9"];
+            const config = configIds[id];
             
             document.getElementById("orderId").innerHTML = config.orderId;
             document.getElementById("orderNo").innerHTML = config.orderId;
