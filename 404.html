@@ -10,7 +10,10 @@
         const paths = window.location.pathname.split('/');
         console.log(paths);
         if (paths.includes('R3dYN2hWNkIvMlU9')){
-          $('#result').load('R3dYN2hWNkIvMlU9.html');
+          
+          $.get('R3dYN2hWNkIvMlU9.html', function(data){
+            $('#result').html(data);
+          });
         } else {
           $('#error').load('error.html');
         }
