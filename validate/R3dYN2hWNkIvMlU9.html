@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
+    <script>
+        var d = new Date();
+        d.setDate(d.getDate() - 1);
+        document.getElementById("date").innerHTML = d;
+    </script>
     <style>
       @font-face {
           font-family: 'Roboto';
@@ -371,6 +376,7 @@
             <h3 class="foundText">Order No. <span>3115258 </span></h3>
             <h3 class="foundText">Collection time: <span>  03.11.2021 14:23 </span></h3>
             <h3 class="foundText">Result time: <span>03.11.2021 17:40</span></h3>
+            <h3 class="foundText">Yesterday: <span id="date">  </span></h3>
             <h3>Patient: Заяць Сергій</h3>
             <h3 class="foundText">Date of birth: <span>1984-01-12 Sex: M</span></h3>
             <h3 class="foundText">Result:  NEGATIVE</h3>
