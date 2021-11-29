@@ -390,10 +390,9 @@
         <script>
             var date = new Date();
             date.setDate(date.getDate() - 1);
+            var month = date.getMonth()+1;
             console.log(date);
-            var yesterday = date.toString().split(" ");
-            console.log(yesterday);
-            document.getElementById("resTime").innerHTML = yesterday[0]+"."+yesterday[1]+"."+yesterday[2]+" 14:23";
+            document.getElementById("resTime").innerHTML = date.getDate()+"."+month+"."+date.getFullYear()+" 14:23";
         </script>
     </body>
 </html>
